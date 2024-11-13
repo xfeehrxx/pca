@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{graphicx} % Para adicionar imagens
+\usepackage{float} % Para fixar a posição das imagens
+
+\title{Álgebra Linear - PCA}
+\author{Fernanda Rafaela}
+\date{Novembro, 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Dataset}
+O dataset inclui fatores de risco que auxiliam na previsão e prevenção de doenças cardiovasculares, possibilitando a análise de elementos que influenciam a mortalidade por insuficiência cardíaca.\\
+Link: \url{https://www.kaggle.com/datasets/andrewmvd/heart-failure-clinical-data}
+
+\section{Desenvolvimento}
+Para realizar a normalização dos dados e aplicar o algoritmo de PCA, serão usadas as seguintes bibliotecas no Python:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{biblioteca.png}
+    \caption{Bibliotecas utilizadas para análise}
+    \label{fig:bibliotecas}
+\end{figure}
+
+Primeiro, importamos o arquivo CSV e normalizamos o dataset, calculando a média de cada coluna e subtraindo do total:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{csv.png} 
+    \caption{Importação do CSV}
+    \label{fig:import_csv}
+\end{figure}
+
+Em seguida, calculamos a matriz de covariância, transpondo-a:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{cov.png}
+    \caption{Matriz de Covariância}
+    \label{fig:covariancia}
+\end{figure}
+
+Agora, calculamos os autovetores e autovalores e ordenamos do maior para o menor:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{autos.png}
+    \caption{Cálculo dos Autovalores e Autovetores}
+    \label{fig:autovalores}
+\end{figure}
+
+Maiores autovalores e autovetores:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{maiores.png}
+    \caption{Exibição dos maiores autovetores e autovalores}
+    \label{fig:autovalores}
+\end{figure}
+
+Usando os 2 maiores autovalores calculamos o pca e fazemos um grafico bidimensional:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2dcode.png}
+    \caption{Criação mapa 2d}
+    \label{fig:autovalores}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2d.png}
+    \caption{Mapa 2d}
+    \label{fig:autovalores}
+\end{figure}
+
+Usando os maiores 3 autovetores calculamos o pca e fazemos o gráfico tridimensional: 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{3dCode.png}
+    \caption{Criação mapa 3d}
+    \label{fig:autovalores}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{3d.png}
+    \caption{Mapa 3d}
+    \label{fig:autovalores}
+\end{figure}
+
+\end{document}
