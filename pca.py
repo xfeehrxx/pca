@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('PCA/heart_failure_clinical_records_dataset.csv')
+df = pd.read_csv('heart_failure_clinical_records_dataset.csv')
 df_scaled = (df - df.mean()) / df.std()
 
 cov = np.cov(df_scaled.T)
